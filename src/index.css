@@ -1,13 +1,300 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-color: #00ff00; /* Terminal green text */
+  --secondary-color: #0077cc;
+  --background-color: #000000; /* Black background like CMD */
+  --text-color: #cccccc; /* Light grey for main text */
+  --light-bg: #1e1e1e; /* Darker grey for code blocks */
+  --border-radius: 0px; /* Terminal-style sharp edges */
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --font-mono: 'Consolas', 'Courier New', monospace; /* Terminal font */
 }
 
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: var(--font-mono);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+  color: var(--text-color);
+  padding: var(--spacing-md);
+}
+
+/* Terminal-style container */
+.App {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--spacing-md);
+}
+
+/* Button styling */
+button {
+  background-color: var(--light-bg);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  padding: 8px 16px;
+  font-size: 16px;
+  font-family: var(--font-mono);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: var(--spacing-lg);
+  margin-bottom: var(--spacing-md);
+  color: #ffffff; /* White headings */
+  font-weight: normal; /* Less bold for terminal look */
+  font-family: var(--font-mono);
+}
+
+h1 {
+  font-size: 2em;
+  color: var(--primary-color); /* Green text like old terminals */
+}
+
+h1::before {
+  content: "> "; /* Terminal prompt symbol */
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  margin-bottom: var(--spacing-md);
+}
+
+/* Terminal-style text animations */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: var(--primary-color) }
+}
+
+/* Update the typing text class to fit content width */
+.typing-text {
+  display: inline-block; /* Only take up as much width as needed */
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0; /* Start with 0 width */
+  animation: 
+    typing 1.5s steps(30, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Add a class for containers that need to fit the typing text */
+.typing-container {
+  display: inline-block; /* Only take up needed width */
+  max-width: fit-content; /* Constrain to the actual content width */
+}
+
+/* Code blocks */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: var(--font-mono);
+  background-color: var(--light-bg);
+  padding: 2px 4px;
+  border-radius: var(--border-radius);
+  color: #ffffff;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Terminal section style */
+.terminal-section {
+  padding: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  border-bottom: 1px solid #333;
+  padding-bottom: var(--spacing-md);
+}
+
+.terminal-section:last-child {
+  border-bottom: none;
+}
+
+.terminal-section p::before {
+  content: "$ ";
+  color: var(--primary-color);
+}
+
+.terminal-section h3::before {
+  content: "$ ";
+  color: var(--primary-color);
+}
+
+.terminal-section h4 {
+  color: #ffffff;
+  margin-top: var(--spacing-md);
+  margin-bottom: var(--spacing-sm);
+  font-weight: normal;
+}
+
+.terminal-section h5 {
+  margin-top: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+}
+
+/* Add these styles for the education section */
+.education-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-lg);
+  margin: var(--spacing-md) 0;
+}
+
+@media (max-width: 768px) {
+  .education-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.education-column h5 {
+  color: var(--primary-color);
+  margin-bottom: var(--spacing-sm);
+  font-size: 1.1rem;
+}
+
+.education-column ul {
+  list-style-type: none;
+  padding-left: var(--spacing-md);
+}
+
+.education-column li {
+  margin-bottom: var(--spacing-sm);
+  position: relative;
+}
+
+.education-column li::before {
+  content: ">";
+  position: absolute;
+  left: calc(-1 * var(--spacing-md));
+  color: var(--primary-color);
+}
+
+.grade {
+  color: var(--primary-color);
+  font-weight: bold;
+  margin-left: var(--spacing-sm);
+}
+
+/* For medium-length typing animations */
+.typing-medium {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+  max-width: fit-content;
+  animation: 
+    typing 1.5s steps(20, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Technical Skills section */
+.skills-container {
+  margin-top: var(--spacing-md);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-group {
+  margin-bottom: var(--spacing-md);
+  flex: 1;
+}
+
+.skills-list {
+  list-style-type: none;
+  padding-left: var(--spacing-md);
+}
+
+.skills-list li {
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skills-list li::before {
+  content: ">";
+  position: absolute;
+  left: calc(-1 * var(--spacing-md));
+  color: var(--primary-color);
+}
+
+.skill-highlight {
+  color: var(--primary-color);
+  font-weight: normal;
+}
+
+/* Previous Experience section */
+.experience-item {
+  margin-bottom: var(--spacing-md);
+}
+
+.experience-list {
+  list-style-type: none;
+  padding-left: var(--spacing-md);
+}
+
+.experience-list li {
+  position: relative;
+  margin-bottom: var(--spacing-sm);
+}
+
+.experience-list li::before {
+  content: ">";
+  position: absolute;
+  left: calc(-1 * var(--spacing-md));
+  color: var(--primary-color);
+}
+
+/* Shorter typing animation for job titles */
+.typing-short {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid var(--primary-color);
+  width: 0;
+  max-width: fit-content;
+  animation: 
+    typing 1s steps(15, end) forwards,
+    blink-caret 0.75s step-end infinite;
+}
+
+/* Add these styles for the projects grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  row-gap: calc(var(--spacing-lg) * 2);
+  margin-top: var(--spacing-lg);
+}
+
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }

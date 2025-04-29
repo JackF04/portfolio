@@ -1,0 +1,142 @@
+.weightlifting-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Rankings section */
+.rankings-section {
+  margin-top: var(--spacing-lg);
+}
+
+.rankings-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.ranking-card {
+  background-color: var(--light-bg);
+  border: 1px solid #333;
+  padding: var(--spacing-md);
+  flex: 1;
+  min-width: 220px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.ranking-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+}
+
+.ranking-card h4 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: var(--spacing-sm);
+}
+
+.ranking-position {
+  display: block;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: var(--spacing-md) 0;
+}
+
+.ranking-achievement {
+  display: block;
+  font-size: 2rem;
+  color: var(--primary-color);
+  font-weight: bold;
+  margin: var(--spacing-md) 0;
+}
+
+.highlight-card {
+  border: 1px solid var(--primary-color);
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+/* Gallery section */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-md);
+}
+
+.gallery-item {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid #333;
+}
+
+.gallery-item p {
+  margin-top: var(--spacing-sm);
+  font-size: 0.9rem;
+  color: #cccccc;
+}
+
+/* Competition history table */
+.competition-table {
+  margin-top: var(--spacing-md);
+  border: 1px solid #333;
+  overflow-x: auto;
+}
+
+.table-header {
+  display: flex;
+  background-color: var(--light-bg);
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.table-row {
+  display: flex;
+  border-top: 1px solid #333;
+}
+
+.table-row:hover {
+  background-color: rgba(0, 255, 0, 0.05);
+}
+
+.table-cell {
+  padding: var(--spacing-sm);
+  flex: 1;
+  min-width: 100px;
+  word-wrap: break-word;
+}
+
+/* Quote styling */
+.weightlifting-quote {
+  font-style: italic;
+  border-left: 2px solid var(--primary-color);
+  padding-left: var(--spacing-md);
+  margin: var(--spacing-lg) 0;
+  color: #ffffff;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .rankings-cards {
+    flex-direction: column;
+  }
+  
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .competition-table {
+    font-size: 0.9rem;
+  }
+}
