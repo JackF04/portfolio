@@ -21,18 +21,17 @@ const About = () => {
           
           <div className="about-text">
             <p>
-              I am currently a student, studying Computer Science at the University of St Andrews on the McIvor-Barrow Scholarship, in my penultimate year.
+              I am currently a student, studying Computer Science at the University of St Andrews on the McIvor-Barrow Scholarship, in my final year.
             </p>
             
             <p>
-              I am open to work in Software Development roles based in the UK. I am eager to apply my skills to impactful projects in a professional environment.
+              I am eager to apply my skills to impactful projects in a professional environment.
             </p>
             
             <p>
               Having grown in Sri Lanka, my passion for technology began when I was young, as I 
               witnessed the impact technology had on my local neighbourhood. This curiosity evolved 
-              into a deep interest when I moved to the UK, where I was exposed to 
-              Computer Science.
+              into a deep interest when I moved to the UK, where I was exposed to Computer Science.
             </p>
             
             <p>

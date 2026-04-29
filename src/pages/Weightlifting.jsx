@@ -5,6 +5,22 @@ const Weightlifting = () => {
   // Competition results data
   const competitions = [
     {
+      date: "November 2025",
+      name: "Scottish Seniors",
+      location: "Edinburgh",
+      result: "1st Place (60kg)",
+      total: "164kg",
+      notes: "Officially Scottish Champ"
+    },
+    {
+      date: "August 2025",
+      name: "Scottish U23s",
+      location: "Arbroath",
+      result: "1st Place (60kg)",
+      total: "166kg",
+      notes: "U23 champ and qualified for Scottish Seniors"
+    },
+    {
       date: "April 2025",
       name: "British Universities Championships",
       location: "Uxbridge",
@@ -70,8 +86,8 @@ const Weightlifting = () => {
         </div>
         
         <p>
-          Outside of academics, I am an accomplished Olympic weightlifter competing in the 67kg weight class.
-          I currently serve as the President of the St Andrews Weightlifting Club, leading both training and competitions.
+          Outside of academics, I am an accomplished Olympic weightlifter competing in the 65kg weight class.
+          I served as the President of the St Andrews Weightlifting Club in the 24/25 academic year, leading both training and competitions.
         </p>
       </div>
 
@@ -84,19 +100,19 @@ const Weightlifting = () => {
           <div className="ranking-card">
             <h4>National Ranking</h4>
             <span className="ranking-position">21st</span>
-            <p>UK Senior 67kg</p>
+            <p>UK Senior 65kg</p>
           </div>
           
           <div className="ranking-card">
             <h4>Scottish Ranking</h4>
             <span className="ranking-position">1st</span>
-            <p>Scottish Senior 67kg</p>
+            <p>Scottish Senior 60kg</p>
           </div>
           
           <div className="ranking-card highlight-card">
             <h4>Record Holder</h4>
-            <span className="ranking-achievement">97kg</span>
-            <p>Scottish Universities 67kg Class Clean and Jerk</p>
+            <span className="ranking-achievement">98kg</span>
+            <p>Scottish Universities 60kg Class Clean and Jerk</p>
           </div>
         </div>
       </div>

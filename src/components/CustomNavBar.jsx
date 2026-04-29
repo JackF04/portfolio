@@ -18,7 +18,7 @@ const CustomNavBar = () => {
         <nav className='navbar'>
         <div className='navbar-logo'>
             <h1>Jack Fernando</h1>
-            <h2>Technology Developer Intern</h2>
+            <h2>Software Developer</h2>
         </div>
         <ul className='navbar-menu'>
             <li><Link to="/">Home</Link></li>

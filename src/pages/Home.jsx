@@ -9,9 +9,11 @@ const Home = () => {
                     <h3 className='typing-text'>Personal Profile</h3>
                 </div>
                 <p>
-                    I am currently a student, studying Computer Science at the University of St Andrews on the McIvor-Barrow Scholarship, in my penultimate year. 
-                    I am looking for work as a Software Engineer, as I am eager to apply my skills to impactful projects in a professional environment.
-                </p>
+                    Final-year Computer Science student and McIvor-Barrow Scholar at the University of St Andrews. 
+                    Recently completed an internship in Private Banking, combining theory with practical application 
+                    in a high-stakes financial environment. I am driven to continue expanding my technical knowledge
+                    and apply my engineering skills.
+               </p>
             </div>
             
             <div className="terminal-section">
@@ -24,21 +26,21 @@ const Home = () => {
                 
                 <div className="education-grid">
                     <div className="education-column">
-                        <h5>First Year Modules</h5>
-                        <ul>
-                            <li>Computer System Fundamentals <span className="grade">17.2</span></li>
-                            <li>Object-Oriented Programming <span className="grade">17.8</span></li>
-                            <li>Programming Projects <span className="grade">16.8</span></li>
-                            <li>Programming with data <span className="grade">17.5</span></li>
-                        </ul>
-                    </div>
-                    <div className="education-column">
                         <h5>Second Year Modules</h5>
                         <ul>
                             <li>Foundations of Computation <span className="grade">16.9</span></li>
                             <li>The Internet and the Web <span className="grade">16.5</span></li>
                             <li>Advanced Programming Projects <span className="grade">18.2</span></li>
                             <li>Computer Systems <span className="grade">17.5</span></li>
+                        </ul>
+                    </div>
+                    <div className="education-column">
+                        <h5>Third Year Modules</h5>
+                        <ul>
+                            <li>Software Engineering Project <span className="grade">16.7</span></li>
+                            <li>Databases <span className="grade">17.9</span></li>
+                            <li>Operating Systems <span className="grade">16.5</span></li>
+                            <li>Component Technology <span className="grade">17.2</span></li>
                         </ul>
                     </div>
                 </div>
@@ -52,9 +54,17 @@ const Home = () => {
                 <div className='typing-container'>
                     <h3 className='typing-text'>Previous Experience</h3>
                 </div>
+
+                <div className="experience-item">
+                    <h4 className="typing-short">Technology Developer Intern | Barclays | June 2025 – August 2025</h4>
+                    <ul className="experience-list">
+                        <li>Contributed to enhancing developer workflows as part of the Engineering Excellence team.</li>
+                        <li>Engaged in DevOps practices, designing and refining CI/CD pipelines in Gitlab. Implemented workflow automation and “shift-left” approaches to optimise KPIs such as lead time.</li>
+                    </ul>
+                </div>
                 
                 <div className="experience-item">
-                    <h4 className="typing-short">P/T Customer Assistant | Tesco | April 2022 – Present</h4>
+                    <h4 className="typing-short">P/T Customer Assistant | Tesco | April 2022 – April 2026</h4>
                     <ul className="experience-list">
                         <li>Serving in this role has honed my interpersonal and communication skills, as I interact daily with a diverse customer base.</li>
                         <li>I have developed a keen ability to understand and address customer needs promptly and effectively, enhancing my problem-solving capabilities.</li>

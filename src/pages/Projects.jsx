@@ -6,7 +6,7 @@ const Projects = () => {
         {
           title: "Portfolio Website",
           description: "A terminal-inspired React portfolio website with animations and responsive design.",
-          technologies: ["React", "CSS", "JavaScript"],
+          technologies: ["React", "CSS", "JavaScript", "Netlify"],
           link: "https://github.com/JackF04"
         },
         {
@@ -24,7 +24,7 @@ const Projects = () => {
         },
         {
           title: "Data Analysis with Python",
-          description: "Project involved dataset refinement, script creation, unit testing, data analysis and visualization, and executable scripts for automation, working on population data.",
+          description: "Project involved dataset refinement, script creation, unit testing, data analysis and visualisation, and executable scripts for automation, working on population data.",
           technologies: ["Python", "NumPy", "Matplotlib", "Pandas"],
           link: null
         }
@@ -41,7 +41,7 @@ const Projects = () => {
                     <h4>Development Languages:</h4>
                     <ul className="skills-list">
                         <li><span className="skill-highlight">Good proficiency:</span> Java, Python, Javascript, Kotlin, CSS, SQL</li>
-                        <li><span className="skill-highlight">Basic proficiency:</span> C, C++, Assembly Language </li>
+                        <li><span className="skill-highlight">Basic proficiency:</span> C, C++, Assembly </li>
                     </ul>
                 </div>
                 
