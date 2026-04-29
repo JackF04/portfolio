@@ -112,7 +112,7 @@ const Weightlifting = () => {
           <div className="ranking-card highlight-card">
             <h4>Record Holder</h4>
             <span className="ranking-achievement">98kg</span>
-            <p>Scottish Universities 60kg Class Clean and Jerk</p>
+            <p>Scottish Senior 60kg Class Clean and Jerk</p>
           </div>
         </div>
       </div>
@@ -124,23 +124,23 @@ const Weightlifting = () => {
         
         <div className="gallery-grid">
           <div className="gallery-item">
-            <img src="/DSC_0508.jpg" alt="Snatch lift at Scottish Championships" />
+            <img src="/DSC_0508.jpg" alt="Warm up area at Scottish University Championships" />
             <p>Warm up area</p>
           </div>
           
           <div className="gallery-item">
-            <img src="/DSC_0532.jpg" alt="Clean & Jerk at British University Championships" />
+            <img src="/DSC_0532.jpg" alt="Clean & Jerk at Scottish University Championships" />
             <p>Clean & Jerk Record at Scottish University Championships</p>
           </div>
           
           <div className="gallery-item">
-            <img src="/IMG_0358.jpg" alt="St Andrews Weightlifting Team" />
+            <img src="/IMG_0358.jpg" alt="Snatch Lift" />
             <p>Snatch</p>
           </div>
           
           <div className="gallery-item">
-            <img src="/IMG_0380.jpg" alt="Medal ceremony at Scottish Universities Championships" />
-            <p>Celebrating with Coach</p>
+            <img src="/IMG_0380.jpg" alt="Coach Lee at Scottish Universities Championships" />
+            <p>Coach Lee</p>
           </div>
         </div>
       </div>

@@ -7,7 +7,7 @@ const Projects = () => {
           title: "Portfolio Website",
           description: "A terminal-inspired React portfolio website with animations and responsive design.",
           technologies: ["React", "CSS", "JavaScript", "Netlify"],
-          link: "https://github.com/JackF04"
+          link: null
         },
         {
           title: "To-Do List App",
@@ -18,7 +18,7 @@ const Projects = () => {
         ,
         {
           title: "Tourism Website Development",
-          description: "Designed and developed a WordPress website using Elementor to showcase tourist destinations. Created responsive, user-friendly layouts and managed hosting, domain setup, and backups via Hostinger for optimal performance.",
+          description: "Designed and developed a WordPress website using Elementor to showcase tourist destinations. Created responsive, user-friendly layouts and managed hosting, domain setup, and backups via Hostinger.",
           technologies: ["WordPress", "Elementor", "Hostinger"],
           link: "https://sureshtours.com"
         },
@@ -40,7 +40,7 @@ const Projects = () => {
                 <div className="skills-group">
                     <h4>Development Languages:</h4>
                     <ul className="skills-list">
-                        <li><span className="skill-highlight">Good proficiency:</span> Java, Python, Javascript, Kotlin, CSS, SQL</li>
+                        <li><span className="skill-highlight">Good proficiency:</span> Java, Python, Javascript, Kotlin, SQL</li>
                         <li><span className="skill-highlight">Basic proficiency:</span> C, C++, Assembly </li>
                     </ul>
                 </div>
