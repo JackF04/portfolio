@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Personal portfolio site for Jack Fernando, a Computer Science student at the University of St Andrews and Olympic weightlifter. Showcases projects, technical skills, and competition history.
 
-## Available Scripts
+Live at [jack-fernando.netlify.app](https://jack-fernando.netlify.app).
 
-In the project directory, you can run:
+Built with React and deployed on Netlify.
 
-### `npm start`
+## Pages
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Home**: profile, education, previous experience
+- **Projects**: technical skills and project list
+- **Weightlifting**: rankings, gallery, and competition history
+- **About**: bio and contact links
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech stack
 
-### `npm test`
+- React 19 with `react-router-dom` for client-side routing
+- Create React App (`react-scripts`) build pipeline
+- Plain CSS with a terminal-inspired theme
+- Netlify for hosting and continuous deployment
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Local development
 
-### `npm run build`
+```bash
+npm install
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Opens at [http://localhost:3000](http://localhost:3000) with hot reload.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Production build
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run build
+```
 
-### `npm run eject`
+Outputs to `build/`. To preview locally:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npx serve -s build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```
+public/             Static assets (images, favicon, _redirects)
+src/
+  App.js            Router setup
+  components/       CustomNavBar, ProjectCard
+  pages/            Home, Projects, Weightlifting, About
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Deployment
 
-## Learn More
+Hosted on Netlify with auto-deploy on push to `main`:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Build command:** `npm run build`
+- **Publish directory:** `build`
+- **SPA fallback:** `public/_redirects` rewrites all paths to `index.html` so client-side routes survive a refresh
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contact
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- GitHub: [JackF04](https://github.com/JackF04)
+- LinkedIn: [jack-fernando](https://linkedin.com/in/jack-fernando)
+- Email: fernandojack14@gmail.com
