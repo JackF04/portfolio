@@ -12,7 +12,7 @@ const About = () => {
         <div className="about-content">
           <div className="profile-image-container">
             <img 
-              src="../../profile-photo.jpg" 
+              src="/profile-photo.jpg"
               alt="Jack Fernando" 
               className="profile-image"
             />
@@ -37,7 +37,7 @@ const About = () => {
             
             <p>
               Outside of academics, I enjoy Olympic Weightlifting. I was President of the St Andrews
-              Weightlifitng Club in my third year, and I currently hold a first place ranking in Scotland,
+              Weightlifting Club in my third year, and I currently hold a first place ranking in Scotland,
               and hold a Scottish Universities record in the 67kg weight class. I also enjoy playing cricket,
               and played for the St Andrews First XI team in my first year.
             </p>

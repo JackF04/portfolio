@@ -7,17 +7,17 @@ const Projects = () => {
           title: "Portfolio Website",
           description: "A terminal-inspired React portfolio website with animations and responsive design.",
           technologies: ["React", "CSS", "JavaScript"],
-          link: "localhost:3000"
+          link: "https://github.com/JackF04"
         },
         {
           title: "To-Do List App",
           description: "In a team of 2, developed a responsive to-do list web application using React and CSS. Integrated Firebase for real-time data storage and built backend services in Python with custom API endpoints for handling user requests.",
-          technologies: ["React", "CSS", "Python", "Firebase", "Netify"],
+          technologies: ["React", "CSS", "Python", "Firebase", "Netlify"],
           link: "https://todolist-rpjf.netlify.app/"
         }
         ,
         {
-          title: "Toursim Website Development",
+          title: "Tourism Website Development",
           description: "Designed and developed a WordPress website using Elementor to showcase tourist destinations. Created responsive, user-friendly layouts and managed hosting, domain setup, and backups via Hostinger for optimal performance.",
           technologies: ["WordPress", "Elementor", "Hostinger"],
           link: "https://sureshtours.com"

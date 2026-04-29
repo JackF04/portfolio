@@ -23,7 +23,7 @@ const Weightlifting = () => {
     {
       date: "August 2024",
       name: "Scottish U23 Championships",
-      location: "Abroath",
+      location: "Arbroath",
       result: "1st Place (61kg)",
       total: "148kg",
       notes: "Qualified for British Universities Championships"
@@ -38,7 +38,7 @@ const Weightlifting = () => {
     },
     {
       date: "April 2024",
-      name: "British Universities CHampionships",
+      name: "British Universities Championships",
       location: "Uxbridge",
       result: "2nd Place (61kg)",
       total: "145kg",
@@ -108,22 +108,22 @@ const Weightlifting = () => {
         
         <div className="gallery-grid">
           <div className="gallery-item">
-            <img src="../../DSC_0508.jpg" alt="Snatch lift at Scottish Championships" />
+            <img src="/DSC_0508.jpg" alt="Snatch lift at Scottish Championships" />
             <p>Warm up area</p>
           </div>
           
           <div className="gallery-item">
-            <img src="../../DSC_0532.jpg" alt="Clean & Jerk at British University Championships" />
+            <img src="/DSC_0532.jpg" alt="Clean & Jerk at British University Championships" />
             <p>Clean & Jerk Record at Scottish University Championships</p>
           </div>
           
           <div className="gallery-item">
-            <img src="../../IMG_0358.jpg" alt="St Andrews Weightlifting Team" />
+            <img src="/IMG_0358.jpg" alt="St Andrews Weightlifting Team" />
             <p>Snatch</p>
           </div>
           
           <div className="gallery-item">
-            <img src="../../IMG_0380.jpg" alt="Medal ceremony at Scottish Universities Championships" />
+            <img src="/IMG_0380.jpg" alt="Medal ceremony at Scottish Universities Championships" />
             <p>Celebrating with Coach</p>
           </div>
         </div>
