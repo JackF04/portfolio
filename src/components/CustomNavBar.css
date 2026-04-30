@@ -6,6 +6,7 @@
   background-color: #000000;
   border-bottom: 1px solid #333333;
   font-family: 'Consolas', 'Courier New', monospace;
+  position: relative;
 }
 
 .navbar-logo {
@@ -17,16 +18,15 @@
 .navbar-logo h1 {
   font-size: 1.9rem;
   font-weight: normal;
-  color: #00ff00;
+  color: var(--primary-color);
   margin: 0;
 }
 
 .navbar-logo h2 {
   font-size: 1rem;
   font-weight: normal;
-  color: #cccccc;
-  margin: 0 0 0 20px; /* Add left margin to align with text after the prompt */
-  margin-bottom: 15px;;
+  color: var(--text-color);
+  margin: 0 0 15px 20px;
 }
 
 .navbar-logo h1::before {
@@ -49,14 +49,56 @@
 
 .navbar-menu a {
   text-decoration: none;
-  color: #cccccc;
+  color: var(--text-color);
   font-size: 1.1rem;
   transition: color 0.3s ease;
 }
 
 .navbar-menu a:hover {
-  color: #00ff00;
+  color: var(--primary-color);
   text-decoration: none;
+}
+
+.navbar-menu a.active {
+  color: var(--primary-color);
+}
+
+.navbar-menu a.active::before {
+  content: "> ";
+}
+
+.mobile-menu-button {
+  display: none;
+  background: transparent;
+  border: 1px solid var(--primary-color);
+  padding: 8px 10px;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  width: 40px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+}
+
+.mobile-menu-button span {
+  display: block;
+  width: 18px;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.mobile-menu-button.is-open span:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.mobile-menu-button.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-button.is-open span:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
 }
 
 @keyframes fadeInDown {
@@ -70,17 +112,37 @@
   }
 }
 
-/* Responsive styles */
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem 1rem;
+    flex-wrap: wrap;
   }
-  
+
+  .mobile-menu-button {
+    display: flex;
+  }
+
   .navbar-menu {
     display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 1px solid #333;
+    padding-top: 1rem;
   }
-  
-  .mobile-menu-button {
-    display: block;
+
+  .navbar-menu.is-open {
+    display: flex;
+  }
+
+  .navbar-menu li {
+    margin-left: 0;
+    margin-bottom: 0.75rem;
+  }
+
+  .navbar-menu li::before {
+    content: "> ";
+    color: var(--primary-color);
+    margin-right: 0.5rem;
   }
 }

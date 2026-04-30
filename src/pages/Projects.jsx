@@ -14,8 +14,7 @@ const Projects = () => {
           description: "In a team of 2, developed a responsive to-do list web application using React and CSS. Integrated Firebase for real-time data storage and built backend services in Python with custom API endpoints for handling user requests.",
           technologies: ["React", "CSS", "Python", "Firebase", "Netlify"],
           link: "https://todolist-rpjf.netlify.app/"
-        }
-        ,
+        },
         {
           title: "Tourism Website Development",
           description: "Designed and developed a WordPress website using Elementor to showcase tourist destinations. Created responsive, user-friendly layouts and managed hosting, domain setup, and backups via Hostinger.",

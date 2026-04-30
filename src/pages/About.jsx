@@ -29,7 +29,7 @@ const About = () => {
             </p>
             
             <p>
-              Having grown in Sri Lanka, my passion for technology began when I was young, as I 
+              Having grown up in Sri Lanka, my passion for technology began when I was young, as I 
               witnessed the impact technology had on my local neighbourhood. This curiosity evolved 
               into a deep interest when I moved to the UK, where I was exposed to Computer Science.
             </p>
@@ -40,15 +40,16 @@ const About = () => {
               and hold a Scottish Universities record in the 67kg weight class. I also enjoy playing cricket,
               and played for the St Andrews First XI team in my first year.
             </p>
-            
-            <div className="connect-section">
-              <h4>Connect With Me</h4>
-              <div className="social-links">
-                <a href="https://github.com/JackF04" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
-                <a href="https://linkedin.com/in/jack-fernando" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
-                <a href="mailto:fernandojack14@gmail.com" className="social-link">Email</a>
-              </div>
-            </div>
+          </div>
+        </div>
+
+        <div className="connect-section">
+          <h4>Connect With Me</h4>
+          <div className="social-links">
+            <a href="https://github.com/JackF04" target="_blank" rel="noopener noreferrer" className="social-link">GitHub</a>
+            <a href="https://linkedin.com/in/jack-fernando" target="_blank" rel="noopener noreferrer" className="social-link">LinkedIn</a>
+            <a href="mailto:fernandojack14@gmail.com" className="social-link">Email</a>
+            <a href="/JackFernandoCV.pdf" download className="social-link cv-link">Download CV</a>
           </div>
         </div>
       </div>

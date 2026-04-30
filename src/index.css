@@ -1,14 +1,17 @@
 :root {
-  --primary-color: #00ff00; /* Terminal green text */
-  --secondary-color: #0077cc;
-  --background-color: #000000; /* Black background like CMD */
-  --text-color: #cccccc; /* Light grey for main text */
-  --light-bg: #1e1e1e; /* Darker grey for code blocks */
-  --border-radius: 0px; /* Terminal-style sharp edges */
+  --primary-color: #00ff7f; /* Slightly softer terminal green */
+  --accent-color: #ffb000; /* Amber accent for secondary highlights */
+  --secondary-color: #4ec9ff; /* Cyan for tertiary accents */
+  --background-color: #000000;
+  --text-color: #e0e0e0; /* Brighter body text for readability */
+  --muted-color: #9a9a9a;
+  --light-bg: #1a1a1a;
+  --border-color: #2a2a2a;
+  --border-radius: 0px;
   --spacing-sm: 8px;
   --spacing-md: 16px;
   --spacing-lg: 24px;
-  --font-mono: 'Consolas', 'Courier New', monospace; /* Terminal font */
+  --font-mono: 'Consolas', 'Courier New', monospace;
 }
 
 body {
@@ -20,16 +23,52 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   padding: var(--spacing-md);
+  position: relative;
+  min-height: 100vh;
 }
 
-/* Terminal-style container */
+/* CRT scanlines overlay */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.02) 0px,
+    rgba(255, 255, 255, 0.02) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* CRT vignette */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 50%,
+    rgba(0, 0, 0, 0.45) 100%
+  );
+  pointer-events: none;
+  z-index: 9998;
+}
+
 .App {
   max-width: 1200px;
   margin: 0 auto;
   padding: var(--spacing-md);
 }
 
-/* Button styling */
 button {
   background-color: var(--light-bg);
   color: var(--primary-color);
@@ -47,22 +86,27 @@ button:hover {
   color: var(--background-color);
 }
 
-/* Typography */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin-top: var(--spacing-lg);
   margin-bottom: var(--spacing-md);
-  color: #ffffff; /* White headings */
-  font-weight: normal; /* Less bold for terminal look */
+  color: #ffffff;
+  font-weight: normal;
   font-family: var(--font-mono);
 }
 
 h1 {
   font-size: 2em;
-  color: var(--primary-color); /* Green text like old terminals */
+  color: var(--primary-color);
 }
 
 h1::before {
-  content: "> "; /* Terminal prompt symbol */
+  content: "> ";
 }
 
 h2 {
@@ -77,7 +121,6 @@ p {
   margin-bottom: var(--spacing-md);
 }
 
-/* Terminal-style text animations */
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -88,25 +131,32 @@ p {
   50% { border-color: var(--primary-color) }
 }
 
-/* Update the typing text class to fit content width */
 .typing-text {
-  display: inline-block; /* Only take up as much width as needed */
+  display: inline-block;
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid var(--primary-color);
-  width: 0; /* Start with 0 width */
-  animation: 
+  width: 0;
+  animation:
     typing 1.5s steps(30, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
 
-/* Add a class for containers that need to fit the typing text */
-.typing-container {
-  display: inline-block; /* Only take up needed width */
-  max-width: fit-content; /* Constrain to the actual content width */
+/* Skip typing animation after first visit in a session */
+.no-typing .typing-text,
+.no-typing .typing-medium,
+.no-typing .typing-short {
+  animation: none;
+  width: auto;
+  max-width: none;
+  border-right: none;
 }
 
-/* Code blocks */
+.typing-container {
+  display: inline-block;
+  max-width: fit-content;
+}
+
 code {
   font-family: var(--font-mono);
   background-color: var(--light-bg);
@@ -115,7 +165,6 @@ code {
   color: #ffffff;
 }
 
-/* Links */
 a {
   color: var(--primary-color);
   text-decoration: none;
@@ -125,11 +174,10 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Terminal section style */
 .terminal-section {
   padding: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: var(--spacing-md);
 }
 
@@ -159,7 +207,6 @@ a:hover {
   margin-bottom: var(--spacing-sm);
 }
 
-/* Add these styles for the education section */
 .education-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -174,7 +221,7 @@ a:hover {
 }
 
 .education-column h5 {
-  color: var(--primary-color);
+  color: var(--accent-color);
   margin-bottom: var(--spacing-sm);
   font-size: 1.1rem;
 }
@@ -197,12 +244,11 @@ a:hover {
 }
 
 .grade {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: bold;
   margin-left: var(--spacing-sm);
 }
 
-/* For medium-length typing animations */
 .typing-medium {
   display: inline-block;
   overflow: hidden;
@@ -210,12 +256,11 @@ a:hover {
   border-right: 2px solid var(--primary-color);
   width: 0;
   max-width: fit-content;
-  animation: 
+  animation:
     typing 1.5s steps(20, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
 
-/* Technical Skills section */
 .skills-container {
   margin-top: var(--spacing-md);
   display: flex;
@@ -245,13 +290,37 @@ a:hover {
 }
 
 .skill-highlight {
-  color: var(--primary-color);
+  color: var(--accent-color);
   font-weight: normal;
 }
 
-/* Previous Experience section */
 .experience-item {
   margin-bottom: var(--spacing-md);
+}
+
+.experience-heading {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: baseline;
+}
+
+.experience-role {
+  color: #ffffff;
+}
+
+.experience-employer {
+  color: var(--accent-color);
+  font-weight: bold;
+}
+
+.experience-sep {
+  color: var(--muted-color);
+}
+
+.experience-date {
+  color: var(--secondary-color);
+  font-size: 0.95rem;
 }
 
 .experience-list {
@@ -271,7 +340,6 @@ a:hover {
   color: var(--primary-color);
 }
 
-/* Shorter typing animation for job titles */
 .typing-short {
   display: inline-block;
   overflow: hidden;
@@ -279,15 +347,14 @@ a:hover {
   border-right: 2px solid var(--primary-color);
   width: 0;
   max-width: fit-content;
-  animation: 
+  animation:
     typing 1s steps(15, end) forwards,
     blink-caret 0.75s step-end infinite;
 }
 
-/* Add these styles for the projects grid */
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: var(--spacing-lg);
   row-gap: calc(var(--spacing-lg) * 2);
   margin-top: var(--spacing-lg);
@@ -296,5 +363,42 @@ a:hover {
 @media (max-width: 768px) {
   .projects-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Reduced motion preference */
+/* 404 page */
+.not-found-art {
+  color: var(--primary-color);
+  font-size: 0.85rem;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.not-found-line {
+  margin: var(--spacing-sm) 0;
+}
+
+.not-found-line::before {
+  content: none !important;
+}
+
+.not-found-prompt {
+  color: var(--primary-color);
+  margin-right: 0.5rem;
+}
+
+.not-found-error {
+  color: var(--accent-color);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .typing-text,
+  .typing-medium,
+  .typing-short {
+    animation: none !important;
+    width: auto !important;
+    max-width: none !important;
+    border-right: none !important;
   }
 }

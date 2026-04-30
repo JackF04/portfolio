@@ -1,9 +1,15 @@
 import React from 'react';
 import './ProjectCard.css';
 
-const ProjectCard = ({ title, description, technologies, link, githubLink }) => {
+const ProjectCard = ({ title, description, technologies, link }) => {
   return (
     <div className="project-card">
+      <div className="project-terminal-bar">
+        <span className="dot red"></span>
+        <span className="dot amber"></span>
+        <span className="dot green"></span>
+        <span className="project-terminal-title">~/projects</span>
+      </div>
       <h4 className="project-title typing-short">{title}</h4>
       <div className="project-content">
         <p className="project-description">{description}</p>
