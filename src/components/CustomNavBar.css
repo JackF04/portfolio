@@ -81,6 +81,12 @@
   align-items: center;
 }
 
+.mobile-menu-button:hover,
+.mobile-menu-button:active {
+  background: transparent;
+  color: var(--primary-color);
+}
+
 .mobile-menu-button span {
   display: block;
   width: 18px;
@@ -168,5 +174,9 @@
     content: "> ";
     color: var(--primary-color);
     margin-right: 0.5rem;
+  }
+
+  .navbar-menu a.active::before {
+    content: none;
   }
 }

@@ -10,8 +10,7 @@ const Home = () => {
                 <p>
                     Final-year Computer Science student and McIvor-Barrow Scholar at the University of St Andrews.
                     Recently completed an internship in Private Banking, combining theory with practical application
-                    in a high-stakes financial environment. Driven to continue expanding my technical knowledge
-                    and apply my engineering skills.
+                    in a high-stakes financial environment.
                 </p>
             </div>
 
