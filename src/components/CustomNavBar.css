@@ -116,19 +116,37 @@
   .navbar {
     padding: 0.5rem 1rem;
     flex-wrap: wrap;
+    align-items: flex-start;
+  }
+
+  .navbar-logo {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+
+  .navbar-logo h1 {
+    font-size: 1.35rem;
+  }
+
+  .navbar-logo h2 {
+    font-size: 0.8rem;
+    margin: 0 0 4px 10px;
   }
 
   .mobile-menu-button {
     display: flex;
+    flex: 0 0 auto;
+    align-self: flex-start;
+    margin-top: 5px;
   }
 
   .navbar-menu {
     display: none;
     flex-direction: column;
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.75rem;
     border-top: 1px solid #333;
-    padding-top: 1rem;
+    padding-top: 0.75rem;
   }
 
   .navbar-menu.is-open {
@@ -138,6 +156,12 @@
   .navbar-menu li {
     margin-left: 0;
     margin-bottom: 0.75rem;
+  }
+
+  .navbar-menu a {
+    font-size: 1rem;
+    padding: 4px 0;
+    display: inline-block;
   }
 
   .navbar-menu li::before {

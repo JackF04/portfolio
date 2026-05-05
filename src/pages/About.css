@@ -109,10 +109,20 @@
   .about-content {
     flex-direction: column;
   }
-  
+
   .profile-image-container {
-    margin-right: 0;
-    margin-bottom: var(--spacing-md);
-    max-width: 250px;
+    margin: 0 auto var(--spacing-md);
+    max-width: 220px;
+    min-width: unset;
+    height: 260px;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+
+  .social-link {
+    flex: 0 0 auto;
   }
 }

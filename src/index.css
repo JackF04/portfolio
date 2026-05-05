@@ -392,6 +392,40 @@ a:hover {
   color: var(--accent-color);
 }
 
+@media (max-width: 768px) {
+  body {
+    padding: var(--spacing-sm);
+  }
+
+  .App {
+    padding: var(--spacing-sm);
+  }
+
+  .typing-container {
+    display: block;
+    max-width: 100%;
+  }
+
+  .typing-text,
+  .typing-medium,
+  .typing-short {
+    animation: none;
+    width: auto;
+    max-width: 100%;
+    white-space: normal;
+    overflow: visible;
+    border-right: none;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .skills-group {
+    flex: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .typing-text,
   .typing-medium,
