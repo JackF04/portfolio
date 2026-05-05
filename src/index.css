@@ -401,20 +401,14 @@ a:hover {
     padding: var(--spacing-sm);
   }
 
+  h3 {
+    font-size: 1.2em;
+  }
+
   .typing-container {
     display: block;
     max-width: 100%;
-  }
-
-  .typing-text,
-  .typing-medium,
-  .typing-short {
-    animation: none;
-    width: auto;
-    max-width: 100%;
-    white-space: normal;
-    overflow: visible;
-    border-right: none;
+    overflow: hidden;
   }
 
   .skills-container {
