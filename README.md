@@ -2,7 +2,7 @@
 
 Personal portfolio site for Jack Fernando, a Computer Science student at the University of St Andrews and Olympic weightlifter. Showcases projects, technical skills, and competition history.
 
-Live at [jack-fernando.netlify.app](https://jackfernando.com).
+Live at [jackfernando.com](https://jackfernando.com).
 
 Built with React and deployed on Netlify.
 
