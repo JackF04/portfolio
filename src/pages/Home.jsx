@@ -8,49 +8,28 @@ const Home = () => {
                     <h3 className='typing-text'>Personal Profile</h3>
                 </div>
                 <p>
-                    Final-year Computer Science student and McIvor-Barrow Scholar at the University of St Andrews.
-                    Recently completed an internship in Private Banking, combining theory with practical application
-                    in a high-stakes financial environment.
+                    Technology Developer at Barclays Investment Bank. Recently graduated with a 
+                    BSc with First Class Honours in Computer Science from The University of St Andrews, 
+                    under the prestigious McIvor Barrow Scholarship.
                 </p>
             </div>
 
             <div className="terminal-section">
                 <div className='typing-container'>
-                    <h3 className='typing-text'>Education</h3>
+                    <h3 className='typing-text'>Experience</h3>
                 </div>
 
-                <h4>BSc Computer Science | St Andrews University | September 2022 – Present</h4>
-                <p>Modules graded out of 20 with 16.5+ qualifying for a First Class honours</p>
-
-                <div className="education-grid">
-                    <div className="education-column">
-                        <h5>Second Year Modules</h5>
-                        <ul>
-                            <li>Foundations of Computation <span className="grade">16.9</span></li>
-                            <li>The Internet and the Web <span className="grade">16.5</span></li>
-                            <li>Advanced Programming Projects <span className="grade">18.2</span></li>
-                            <li>Computer Systems <span className="grade">17.5</span></li>
-                        </ul>
-                    </div>
-                    <div className="education-column">
-                        <h5>Third Year Modules</h5>
-                        <ul>
-                            <li>Software Engineering Project <span className="grade">16.7</span></li>
-                            <li>Databases <span className="grade">17.9</span></li>
-                            <li>Operating Systems <span className="grade">16.5</span></li>
-                            <li>Component Technology <span className="grade">17.2</span></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <h4>The Royal Belfast Academical Institution (RBAI) | September 2016 – June 2022</h4>
-                <p><strong>A-Levels:</strong> Further Mathematics (A*); Mathematics (A*); Physics (A*); Computer Science (A*)</p>
-                <p><strong>GCSEs:</strong> 10 A*s including Further Mathematics, Mathematics, Digital Technology, Physics</p>
-            </div>
-
-            <div className="terminal-section">
-                <div className='typing-container'>
-                    <h3 className='typing-text'>Previous Experience</h3>
+                <div className="experience-item">
+                    <h4 className="experience-heading">
+                        <span className="experience-role">Technology Developer</span>
+                        <span className="experience-sep">|</span>
+                        <span className="experience-employer">Barclays Investment Bank</span>
+                        <span className="experience-sep">|</span>
+                        <span className="experience-date">August 2026 – Current</span>
+                    </h4>
+                    <ul className="experience-list">
+                        <li>Developer on the Barclays Trade Capture & Enrichment Platform</li>
+                    </ul>
                 </div>
 
                 <div className="experience-item">
@@ -95,6 +74,43 @@ const Home = () => {
                     </ul>
                 </div>
             </div>
+
+            <div className="terminal-section">
+                <div className='typing-container'>
+                    <h3 className='typing-text'>Education</h3>
+                </div>
+
+                <h4>BSc Computer Science | St Andrews University | First Class Honours</h4>
+                <p>Modules graded out of 20 with 16.5+ qualifying for a First Class honours</p>
+
+                <div className="education-grid">
+                    <div className="education-column">
+                        <h5>Third Year Modules</h5>
+                        <ul>
+                            <li>Software Engineering Project <span className="grade">16.7</span></li>
+                            <li>Databases <span className="grade">17.9</span></li>
+                            <li>Operating Systems <span className="grade">16.5</span></li>
+                            <li>Component Technology <span className="grade">17.2</span></li>
+                        </ul>
+                    </div>
+
+                    <div className="education-column">
+                        <h5>Final Year Modules</h5>
+                        <ul>
+                            <li>Dissertation <span className="grade">18.8</span></li>
+                            <li>Critical Systems Engineering <span className="grade">19.0</span></li>
+                            <li>Signal Processing <span className="grade">19.2</span></li>
+                            <li>Machine Learning <span className="grade">16.9</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4>The Royal Belfast Academical Institution (RBAI)</h4>
+                <p><strong>A-Levels:</strong> Further Mathematics (A*); Mathematics (A*); Physics (A*); Computer Science (A*)</p>
+                <p><strong>GCSEs:</strong> 10 A*s including Further Mathematics, Mathematics, Digital Technology, Physics</p>
+            </div>
+
+            
         </div>
     )
 }
