@@ -4,6 +4,12 @@ import ProjectCard from '../components/ProjectCard'
 const Projects = () => {
     const projects = [
         {
+          title: "AI Weightlifting Coach",
+          description: "Analysis of Olympic Weightlifting Biomechanics: A Computer Vision and Machine Learning Approach to Automate Coaching Feedback. App in development.",
+          technologies: ["Python", "PyTorch", "YOLO", "MediaPipe"],
+          link: null
+        },
+        {
           title: "Portfolio Website",
           description: "A terminal-inspired React portfolio website with animations and responsive design.",
           technologies: ["React", "CSS", "JavaScript", "Netlify"],
@@ -21,12 +27,6 @@ const Projects = () => {
           technologies: ["WordPress", "Elementor", "Hostinger"],
           link: "https://sureshtours.com"
         },
-        {
-          title: "Data Analysis with Python",
-          description: "Project involved dataset refinement, script creation, unit testing, data analysis and visualisation, and executable scripts for automation, working on population data.",
-          technologies: ["Python", "NumPy", "Matplotlib", "Pandas"],
-          link: null
-        }
     ];
   return (
     <div>
