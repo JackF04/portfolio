@@ -87,7 +87,7 @@ const Weightlifting = () => {
         
         <p>
           Outside of academics, I am an accomplished Olympic weightlifter competing in the 65kg weight class.
-          I served as the President of the St Andrews Weightlifting Club in the 24/25 academic year, leading both training and competitions.
+          I served as the President of the St Andrews Weightlifting Club, leading both training and competitions.
         </p>
       </div>
 
@@ -171,14 +171,6 @@ const Weightlifting = () => {
             </div>
           ))}
         </div>
-      </div>
-
-      <div className="terminal-section">
-        <blockquote className="weightlifting-quote">
-          "Training at a high level in Olympic weightlifting has taught me the 
-          importance of discipline, perseverance, goal-setting, and adaptability—skills
-           that I believe are directly transferable to my professional career. "
-        </blockquote>
       </div>
     </div>
   )
