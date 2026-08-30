@@ -5,7 +5,7 @@ const Home = () => {
         <div>
             <div className="terminal-section">
                 <div className='typing-container'>
-                    <h3 className='typing-text'>Personal Profile</h3>
+                    <h3 className='typing-text'>Profile</h3>
                 </div>
                 <p>
                     Technology Developer at Barclays Investment Bank. Recently graduated with a 
