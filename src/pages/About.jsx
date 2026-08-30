@@ -21,11 +21,7 @@ const About = () => {
           
           <div className="about-text">
             <p>
-              I am currently a student, studying Computer Science at the University of St Andrews on the McIvor-Barrow Scholarship, in my final year.
-            </p>
-            
-            <p>
-              I am eager to apply my skills to impactful projects in a professional environment.
+              Currently a Technology Developer in Barclays Investment Bank.
             </p>
             
             <p>

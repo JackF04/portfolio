@@ -36,7 +36,7 @@ const Home = () => {
                     <h4 className="experience-heading">
                         <span className="experience-role">Technology Developer Intern</span>
                         <span className="experience-sep">|</span>
-                        <span className="experience-employer">Barclays</span>
+                        <span className="experience-employer">Barclays Private Bank</span>
                         <span className="experience-sep">|</span>
                         <span className="experience-date">June 2025 – August 2025</span>
                     </h4>
