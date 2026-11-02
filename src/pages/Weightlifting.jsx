@@ -1,7 +1,13 @@
 import React from 'react'
 import './Weightlifting.css'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const Weightlifting = () => {
+  usePageMeta(
+    'Weightlifting | Jack Fernando',
+    "Jack Fernando's Olympic weightlifting rankings, records, and competition history."
+  );
+
   // Competition results data
   const competitions = [
     {

@@ -1,8 +1,15 @@
 import React from 'react'
 import './About.css' // We'll create this file for specific About page styling
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const About = () => {
+  usePageMeta(
+    'About | Jack Fernando',
+    'About Jack Fernando.'
+  );
+
   return (
+    
     <div>
       <div className="terminal-section about-section">
         <div className='typing-container'>

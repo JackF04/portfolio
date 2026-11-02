@@ -1,8 +1,11 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const NotFound = () => {
     const location = useLocation();
+
+    usePageMeta('404 | Jack Fernando', 'Page not found.', 'noindex, follow');
 
     return (
         <div className="terminal-section not-found">

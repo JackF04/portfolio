@@ -1,7 +1,13 @@
 import React from 'react'
 import ProjectCard from '../components/ProjectCard'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const Projects = () => {
+    usePageMeta(
+        'Projects | Jack Fernando',
+        'Software projects and technical skills.'
+    );
+
     const projects = [
         {
           title: "AI Weightlifting Coach",

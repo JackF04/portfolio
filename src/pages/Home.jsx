@@ -1,6 +1,12 @@
 import React from 'react'
+import { usePageMeta } from '../hooks/usePageMeta'
 
 const Home = () => {
+    usePageMeta(
+        'Jack Fernando: Portfolio',
+        'Jack Fernando — Technology Developer and Olympic weightlifter. Portfolio of software projects and competition results.'
+    );
+
     return (
         <div>
             <div className="terminal-section">
